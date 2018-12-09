@@ -2,8 +2,8 @@
 
 ## Status
 
-![blitzcrank](https://travis-ci.com/yishenggudou/blitzcrank.svg?branch=master)
-![readthedocs](https://readthedocs.org/projects/blitzcrank/badge/?version=latest)
+[![blitzcrank](https://travis-ci.com/yishenggudou/blitzcrank.svg?branch=master)](https://travis-ci.com/yishenggudou/blitzcrank)
+[![readthedocs](https://readthedocs.org/projects/blitzcrank/badge/?version=latest)](https://blitzcrank.readthedocs.io/zh_CN/latest/)
 
 ## 简介
 
