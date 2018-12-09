@@ -130,3 +130,4 @@ venv.bak/
 .mypy_cache/
 
 /.idea/
+/blitzcrank-jython-command/blitzcrank-jython-command.iml
