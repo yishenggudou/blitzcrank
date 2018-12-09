@@ -3,7 +3,7 @@
 ## Status
 
 ![blitzcrank](https://travis-ci.com/yishenggudou/blitzcrank.svg?branch=master)
-![readthedocs](https://blitzcrank.readthedocs.io/zh_CN/latest/?badge=latest)
+![readthedocs](https://readthedocs.org/projects/blitzcrank/badge/?version=latest)
 
 ## 简介
 

@@ -12,16 +12,16 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import distutils.sysconfig
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
 import sys
-import distutils.sysconfig
+
 site_package_path = distutils.sysconfig.get_python_lib()
 sys.path.insert(0, os.path.join(site_package_path, 'sphinxcontrib/unicode_ids'))
-
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, PROJECT_DIR)
@@ -242,17 +242,6 @@ plantuml_jar_path = os.path.join(PROJECT_DIR, "plantuml.jar")
 # plantuml = "java -jar " + "-Iplantuml_themes/{1}.pu {0}".format(plantuml_jar_path, plantuml_theme)
 plantuml_output_format = "svg"
 plantuml_latex_output_format = "eps"
-
-## swagger2 -config
-extensions += ['sphinxcontrib.swagger2', ]
-swagger_api_url = os.path.join(PROJECT_DIR, '_static', "api-docs.json")
-swagger_api_domain = ""
-
-extensions += ['sphinxcontrib.SphinxRest',]
-rest_api_source_root = os.path.join(PROJECT_DIR, "_static", "apis")
-rest_api_domain = ""
-rest_api_http_request_example_title = "Request Example"
-rest_api_http_response_example_title = "Response Example"
 
 
 
