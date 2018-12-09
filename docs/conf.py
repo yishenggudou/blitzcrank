@@ -73,7 +73,7 @@ master_doc = 'index'
 import datetime
 
 # General information about the project.
-project = u'Blitzcrank 设计文档'
+project = u'Blitzcrank 文档'
 copyright = u'{0}, timger'.format(datetime.datetime.now().year)
 author = u'timger'
 
@@ -140,7 +140,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Blitzcrank 设计文档'
+htmlhelp_basename = 'Blitzcrank 文档'
 
 # -- Options for LaTeX output ---------------------------------------------
 

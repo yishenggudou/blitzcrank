@@ -1,0 +1,24 @@
+matrix:
+  include:
+  - language: python
+    python: 2.7
+    before_script:
+    - cd backend/tests
+    script:
+    - pytest
+
+  - language: java
+    jdk:
+    - oraclejdk8
+    - openjdk8
+    - openjdk7
+    - oraclejdk7
+    before_script:
+    - cd blitzcrank-jython-command
+    script:
+    - mvn  clean install test
+
+
+notifications:
+  email:
+  - yishenggudou@gmail.com

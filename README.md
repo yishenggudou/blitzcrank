@@ -11,5 +11,6 @@
 
 名字取自英雄联盟
 
+[文档](https://blitzcrank.readthedocs.io/zh_CN/latest/)
 
 
