@@ -10,5 +10,5 @@
     :maxdepth: 2
     :caption: Contents:
 
-
+    soft-architecture.md
 
