@@ -30,3 +30,7 @@ https://github.com/yishenggudou/blitzcrank/issues
 
 https://github.com/yishenggudou/blitzcrank
 
+## FOLLOW
+
+![](https://timger-1251771654.cos.ap-beijing.myqcloud.com/WechatIMG2.jpeg)
+
