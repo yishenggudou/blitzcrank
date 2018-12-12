@@ -4,6 +4,8 @@
 
 [![blitzcrank](https://travis-ci.com/yishenggudou/blitzcrank.svg?branch=master)](https://travis-ci.com/yishenggudou/blitzcrank)
 [![readthedocs](https://readthedocs.org/projects/blitzcrank/badge/?version=latest)](https://blitzcrank.readthedocs.io/zh_CN/latest/)
+[![pipeline status](https://gitlab.com/yishenggudou/blitzcrank/badges/master/pipeline.svg)](https://gitlab.com/yishenggudou/blitzcrank/commits/master)
+[![coverage report](https://gitlab.com/yishenggudou/blitzcrank/badges/master/coverage.svg)](https://gitlab.com/yishenggudou/blitzcrank/commits/master)
 
 ## 简介
 

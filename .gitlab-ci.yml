@@ -1,0 +1,16 @@
+stages:
+  - test
+  - release
+
+
+test_job:
+  script:
+  - uname -a
+  - mvn test
+  stage: test
+
+release_job:
+  script:
+  - uname -a
+  - mvn test
+  stage: release
