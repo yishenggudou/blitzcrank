@@ -15,6 +15,14 @@
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.python/jython -->
+        <dependency>
+            <groupId>org.python</groupId>
+            <artifactId>jython</artifactId>
+            <version>2.7.1b3</version>
+        </dependency>
+    </dependencies>
     <licenses>
         <license>
             <name>GPL 3</name>
@@ -38,139 +46,27 @@
             <name>timger</name>
             <email>yishenggudou@gmail.com</email>
         </developer>
-    </developers><build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
-            <configuration>
-                <source>1.5</source>
-                <target>1.5</target>
-            </configuration>
-        </plugin>
-        <plugin>
-            <!-- 添加 artifactId-version-source.jar -->
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-            <version>2.1.2</version>
-            <executions>
-                <execution>
-                    <id>attach-sources</id>
-                    <goals>
-                        <goal>jar-no-fork</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>2.10.3</version>
-            <executions>
-                <execution>
-                    <id>attach-javadocs</id>
-                    <goals>
-                        <goal>jar</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <additionalparam>-Xdoclint:none</additionalparam>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.7</version>
-            <extensions>true</extensions>
-            <configuration>
-                <serverId>sonatype-nexus-snapshots</serverId>
-                <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                <autoReleaseAfterClose>true</autoReleaseAfterClose>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.5</version>
-            <executions>
-                <execution>
-                    <id>sign-artifacts</id>
-                    <phase>verify</phase>
-                    <goals>
-                        <goal>sign</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-
-    <profiles>
-
-        <profile>
-            <id>release</id>
-            <distributionManagement>
-                <!-- 初步审核通过后，会给你这个内容，在上面已经给出 -->
-                <snapshotRepository>
-                    <id>sonatype-nexus-snapshots</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-                <!-- 初步审核通过后，会给你这个内容，在上面已经给出 -->
-                <repository>
-                    <id>sonatype-nexus-staging</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
-            <build>
-                <plugins>
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>2.2.1</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- Javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.9.1</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
-
+    </developers>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.yishenggudou</groupId>
+                <artifactId>jython-compile-maven-plugin</artifactId>
+                <version>0.0.6</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jython</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <libraries>
+                        <param>/data/github/blitzcrank/src/main/resources/jython-packages/requests-0.10.0.tar.gz</param>
+                    </libraries>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
