@@ -14,9 +14,8 @@ matrix:
     - openjdk7
     - oraclejdk7
     before_script:
-    - cd blitzcrank-jython-command
     script:
-    - mvn  clean install test
+    - mvn test
 
 
 notifications:

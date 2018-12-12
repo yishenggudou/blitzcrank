@@ -6,11 +6,11 @@ stages:
 test_job:
   script:
   - uname -a
-  - cd blitzcrank-jython-command && mvn test
+  - mvn test
   stage: test
 
 release_job:
   script:
   - uname -a
-  - cd blitzcrank-jython-command && mvn test
+  - mvn test
   stage: release
