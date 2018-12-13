@@ -34,5 +34,7 @@ https://github.com/yishenggudou/blitzcrank
 
 <a href="https://twitter.com/yishenggudou?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @yishenggudou</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-![](https://timger-1251771654.cos.ap-beijing.myqcloud.com/WechatIMG2.jpeg)
+![](https://timger-1251771654.cos.ap-beijing.myqcloud.com/WechatIMG2.jpeg =250x250)
+
+
 
