@@ -1,8 +1,8 @@
 # JAVA
 
-## add maven dependency
+## dependency
 
-## config maven
+## config
 
 ## example
 
