@@ -11,4 +11,5 @@ design
     :caption: Contents:
 
     soft-architecture.md
+    feature.md
 
