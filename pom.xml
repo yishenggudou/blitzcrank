@@ -55,6 +55,12 @@
                 <version>0.0.6</version>
                 <executions>
                     <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>jython</goal>
+                        </goals>
+                    </execution>
+                    <execution>
                         <phase>compile</phase>
                         <goals>
                             <goal>jython</goal>
@@ -63,7 +69,7 @@
                 </executions>
                 <configuration>
                     <libraries>
-                        <param>/data/github/blitzcrank/src/main/resources/jython-packages/requests-0.10.0.tar.gz</param>
+                        <param>${project.basedir}/src/main/resources/jython-packages/requests-0.10.0.tar.gz</param>
                     </libraries>
                 </configuration>
             </plugin>
