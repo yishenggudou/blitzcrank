@@ -1,4 +1,4 @@
-# java
+# JAVA
 
 ## add maven dependency
 
