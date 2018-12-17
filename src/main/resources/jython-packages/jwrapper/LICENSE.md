@@ -1,4 +1,4 @@
-Copyright (c) 2017, jython-package-wrapper
+Copyright (c) 2017, jwrapper
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

@@ -11,11 +11,12 @@ class BaskRunner(IRunner):
     """
     var = 1
 
+
+
     def __init__(self):
         pass
 
-    def __call__(self, *args, **kwargs):
-        pass
+
 
     def initialize(self, params, settings):
         pass

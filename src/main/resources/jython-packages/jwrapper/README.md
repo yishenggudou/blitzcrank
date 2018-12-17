@@ -1,8 +1,8 @@
-jython-package-wrapper
+jwrapper
 ===============================
 
 version number: 0.0.1
-author: jython-package-wrapper
+author: jwrapper
 
 Overview
 --------
@@ -14,12 +14,12 @@ Installation / Usage
 
 To install use pip:
 
-    $ pip install jython-package-wrapper
+    $ pip install jwrapper
 
 
 Or clone the repo:
 
-    $ git clone https://github.com/yishenggudou/jython-package-wrapper.git
+    $ git clone https://github.com/yishenggudou/jwrapper.git
     $ python setup.py install
     
 Contributing

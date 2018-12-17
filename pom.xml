@@ -71,7 +71,7 @@
                 </executions>
                 <configuration>
                     <libraries>
-                        <param>${project.basedir}/src/main/resources/jython-packages/jython-package-wrapper</param>
+                        <param>${project.basedir}/src/main/resources/jython-packages/jwrapper</param>
                     </libraries>
                 </configuration>
             </plugin>

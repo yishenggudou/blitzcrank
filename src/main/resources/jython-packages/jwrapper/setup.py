@@ -18,12 +18,12 @@ install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
 dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startswith('git+')]
 
 setup(
-    name='jpackagewrapper',
+    name='jwrapper',
     version=__version__,
     description='A python package that can be installed with pip.',
     long_description=long_description,
-    url='https://github.com/yishenggudou/jython-package-wrapper',
-    download_url='https://github.com/yishenggudou/jython-package-wrapper/tarball/' + __version__,
+    url='https://github.com/yishenggudou/jwrapper',
+    download_url='https://github.com/yishenggudou/jwrapper/tarball/' + __version__,
     license='BSD',
     classifiers=[
       'Development Status :: 3 - Alpha',
@@ -33,7 +33,7 @@ setup(
     keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
-    author='jpackagewrapper',
+    author='jwrapper',
     install_requires=install_requires,
     dependency_links=dependency_links,
     author_email='yishenggudou@gmail.com'
