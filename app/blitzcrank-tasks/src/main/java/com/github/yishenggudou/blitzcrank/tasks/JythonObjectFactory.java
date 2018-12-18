@@ -14,9 +14,9 @@ public class JythonObjectFactory {
         this.interfaceType = interfaceType;
         PyObject importer = state.getBuiltins().__getitem__(Py.newString("__import__"));
         PyObject module = importer.__call__(Py.newString(moduleName));
-        System.out.println(module);
+        // System.out.println(module);
         this.klass = (PyType) module.__getattr__(className);
-        System.err.println("module=" + module + ",class=" + klass);
+        // System.err.println("module=" + module + ",class=" + klass);
     }
 
     public JythonObjectFactory(Class interfaceType, String moduleName, String className) {

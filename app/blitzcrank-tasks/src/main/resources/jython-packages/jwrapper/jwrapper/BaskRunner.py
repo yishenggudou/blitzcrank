@@ -14,7 +14,7 @@ class BaskRunner(IRunnerType, object):
         pass
 
     def run(self):
-        print "test run obj"
+        #print "test run obj"
         return ""
 
     def getStatus(self):
