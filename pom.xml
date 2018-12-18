@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.yishenggudou</groupId>
     <artifactId>blitzcrank</artifactId>
-    <version>0.0.8</version>
-    <packaging>jar</packaging>
-    <name>blitzcrank</name>
+    <version>0.0.11</version>
+    <name>blitzcrank-project</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.module.version>1.0.0</project.module.version>
@@ -35,16 +34,7 @@
         </dependencies>
 
     <licenses>
-        <license>
-            <name>GPL 3</name>
-            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-        <license>
-            <name>GPL 2</name>
-            <url>http://www.gnu.org/licenses/gpl-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
+
         <license>
             <name>Apache Public License</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
