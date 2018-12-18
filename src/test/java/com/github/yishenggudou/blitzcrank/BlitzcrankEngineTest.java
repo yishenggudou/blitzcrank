@@ -8,7 +8,7 @@ public class BlitzcrankEngineTest {
     public void get() {
         Integer step = 0;
         Long start = System.currentTimeMillis();
-        Integer times = 3000;
+        Integer times = 10;
         while (step < times) {
             BlitzcrankEngine blitzcrankEngine = BlitzcrankEngine.getInstance();
             blitzcrankEngine.addPath("/data/github/blitzcrank/target/jython-plugins-tmp/Lib");
