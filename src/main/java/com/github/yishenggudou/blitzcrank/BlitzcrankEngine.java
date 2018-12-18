@@ -8,7 +8,7 @@ import java.util.Properties;
 /**
  * @author timger
  */
-public class BlitzcrankEngine  {
+public class BlitzcrankEngine {
 
 
     public IRunner get(String moduleName, String className) {
@@ -25,7 +25,7 @@ public class BlitzcrankEngine  {
         PySystemState.initialize(sysProps, properties);
         JythonObjectFactory factory = new JythonObjectFactory(pySystemState,
                 IRunner.class, moduleName, className);
-        IRunner runner = (IRunner) factory.createObject(IRunner.class,className);
+        IRunner runner = (IRunner) factory.createObject(IRunner.class, className);
         return runner;
     }
 
