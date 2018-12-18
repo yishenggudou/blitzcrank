@@ -1,4 +1,4 @@
-package com.github.yishenggudou.blitzcrank;
+package com.github.yishenggudou.blitzcrank.tasks;
 
 /**
  * @author timger

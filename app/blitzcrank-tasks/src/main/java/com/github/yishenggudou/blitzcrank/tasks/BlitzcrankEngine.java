@@ -1,5 +1,6 @@
-package com.github.yishenggudou.blitzcrank;
+package com.github.yishenggudou.blitzcrank.tasks;
 
+import com.github.yishenggudou.blitzcrank.common.IRunner;
 import org.python.core.Py;
 import org.python.core.PySystemState;
 
@@ -12,10 +13,7 @@ public class BlitzcrankEngine {
 
 
     public IRunner get(String moduleName, String className) {
-        PySystemState pySystemState = Py.getSystemState();
-        pySystemState.path.add("target/classes/Lib");
-        pySystemState.path.add("classes/Lib");
-        System.out.println(pySystemState.path);
+
         Properties sysProps = System.getProperties();
         Properties properties = new Properties();
         properties.put("python.console.encoding", "UTF-8");
@@ -23,6 +21,13 @@ public class BlitzcrankEngine {
         properties.put("python.security.respectJavaAccessibility", "false");
         properties.put("python.import.site", "false");
         PySystemState.initialize(sysProps, properties);
+        PySystemState pySystemState = Py.getSystemState();
+        System.out.println(pySystemState.modules);
+        System.out.println(pySystemState.getBuiltins());
+        pySystemState.path.add("target/classes/Lib");
+        pySystemState.path.add("classes/Lib");
+        System.out.println(pySystemState.path);
+
         JythonObjectFactory factory = new JythonObjectFactory(pySystemState,
                 IRunner.class, moduleName, className);
         IRunner runner = (IRunner) factory.createWrapperObject();
