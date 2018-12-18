@@ -16,3 +16,10 @@
 [文档](https://blitzcrank.readthedocs.io/zh_CN/latest/)
 
 
+```xml
+<dependency>
+  <groupId>com.github.yishenggudou</groupId>
+  <artifactId>blitzcrank</artifactId>
+  <version>0.0.11</version>
+</dependency>
+```
