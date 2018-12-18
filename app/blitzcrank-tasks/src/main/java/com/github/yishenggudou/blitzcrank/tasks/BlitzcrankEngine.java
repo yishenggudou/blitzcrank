@@ -4,20 +4,29 @@ import com.github.yishenggudou.blitzcrank.common.IRunnerType;
 import org.python.core.Py;
 import org.python.core.PySystemState;
 
+import java.util.HashSet;
 import java.util.Properties;
+import java.util.Set;
 
 /**
  * @author timger
  */
 public class BlitzcrankEngine {
 
+
     private static final BlitzcrankEngine instance = new BlitzcrankEngine();
+
+    private Set<String> paths = new HashSet<>();
 
     private BlitzcrankEngine() {
     }
 
     public static BlitzcrankEngine getInstance() {
         return instance;
+    }
+
+    public void addPath(String path) {
+        this.paths.add(path);
     }
 
     private PySystemState defaultPySystemState;
@@ -34,10 +43,21 @@ public class BlitzcrankEngine {
             properties.put("python.import.site", "false");
             PySystemState.initialize(sysProps, properties);
             PySystemState pySystemState = Py.getSystemState();
-            // System.out.println(pySystemState.modules);
-            // System.out.println(pySystemState.getBuiltins());
             pySystemState.path.add("target/classes/Lib");
+            pySystemState.path.add("target/jython-plugins-tmp/Lib");
             pySystemState.path.add("classes/Lib");
+            String jlib = System.getProperty("jlib");
+            if (jlib != null) {
+                pySystemState.path.add(jlib);
+            }
+            System.out.println(pySystemState.path);
+            try {
+                String current = new java.io.File(".").getCanonicalPath();
+                System.out.println(current);
+            } catch (Throwable throwable) {
+
+            }
+            this.defaultPySystemState = pySystemState;
             return pySystemState;
         }
     }
@@ -45,7 +65,11 @@ public class BlitzcrankEngine {
 
     public IRunnerType get(String moduleName, String className) {
         PySystemState pySystemState = getPySystemState();
-        // System.out.println(pySystemState.path);
+        for (String path : this.paths) {
+            if (pySystemState.path.indexOf(path) < 0) {
+                pySystemState.path.add(path);
+            }
+        }
         JythonObjectFactory factory = new JythonObjectFactory(
                 pySystemState,
                 IRunnerType.class,

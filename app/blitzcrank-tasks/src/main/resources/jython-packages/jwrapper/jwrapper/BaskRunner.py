@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # yishenggudou@gmail.com
 # @timger http://weibo.com/zhanghaibo
+
 from com.github.yishenggudou.blitzcrank.common import IRunnerType
 
 
@@ -14,7 +15,12 @@ class BaskRunner(IRunnerType, object):
         pass
 
     def run(self):
-        #print "test run obj"
+        # print "test run obj"
+        import urllib2
+        req = urllib2.Request("http://mirrors.aliyun.com/pypi/")
+        response = urllib2.urlopen(req)
+        the_page = response.read()
+        response.close()
         return ""
 
     def getStatus(self):
