@@ -1,6 +1,6 @@
 package com.github.yishenggudou.blitzcrank.tasks;
 
-import com.github.yishenggudou.blitzcrank.common.IRunner;
+import com.github.yishenggudou.blitzcrank.common.IRunnerType;
 import org.python.core.Py;
 import org.python.core.PySystemState;
 
@@ -12,7 +12,7 @@ import java.util.Properties;
 public class BlitzcrankEngine {
 
 
-    public IRunner get(String moduleName, String className) {
+    public IRunnerType get(String moduleName, String className) {
 
         Properties sysProps = System.getProperties();
         Properties properties = new Properties();
@@ -27,10 +27,12 @@ public class BlitzcrankEngine {
         pySystemState.path.add("target/classes/Lib");
         pySystemState.path.add("classes/Lib");
         System.out.println(pySystemState.path);
-
-        JythonObjectFactory factory = new JythonObjectFactory(pySystemState,
-                IRunner.class, moduleName, className);
-        IRunner runner = (IRunner) factory.createWrapperObject();
+        JythonObjectFactory factory = new JythonObjectFactory(
+                pySystemState,
+                IRunnerType.class,
+                moduleName,
+                className);
+        IRunnerType runner = (IRunnerType) factory.createObject();
         return runner;
     }
 

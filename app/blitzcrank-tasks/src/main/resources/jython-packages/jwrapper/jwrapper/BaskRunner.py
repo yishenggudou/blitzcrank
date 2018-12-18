@@ -2,21 +2,19 @@
 # -*- coding: utf-8 -*-
 # yishenggudou@gmail.com
 # @timger http://weibo.com/zhanghaibo
-from com.github.yishenggudou.blitzcrank.common import IRunnerWrapper
+from com.github.yishenggudou.blitzcrank.common import IRunnerType
 
 
-class BaskRunner(IRunnerWrapper,object):
+class BaskRunner(IRunnerType, object):
     """
 
     """
-    var = 1
-
-
 
     def initialize(self, params, settings):
         pass
 
     def run(self):
+        print "test run obj"
         return ""
 
     def getStatus(self):

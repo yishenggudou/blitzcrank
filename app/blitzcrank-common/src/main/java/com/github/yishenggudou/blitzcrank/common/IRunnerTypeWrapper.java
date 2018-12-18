@@ -2,7 +2,7 @@ package com.github.yishenggudou.blitzcrank.common;
 
 import java.util.Map;
 
-public class IRunnerWrapper implements IRunner {
+public class IRunnerTypeWrapper implements IRunnerType {
 
     public void initialize(Map<String, String> params, Map<String, String> settings) {
 
