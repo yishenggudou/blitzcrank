@@ -25,7 +25,7 @@ public class BlitzcrankEngine {
         PySystemState.initialize(sysProps, properties);
         JythonObjectFactory factory = new JythonObjectFactory(pySystemState,
                 IRunner.class, moduleName, className);
-        IRunner runner = (IRunner) factory.createObject(IRunner.class, className);
+        IRunner runner = (IRunner) factory.createWrapperObject();
         return runner;
     }
 

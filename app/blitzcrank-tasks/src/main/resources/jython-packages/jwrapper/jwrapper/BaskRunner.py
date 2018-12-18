@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # yishenggudou@gmail.com
 # @timger http://weibo.com/zhanghaibo
-
 from com.github.yishenggudou.blitzcrank import IRunner
+
 
 class BaskRunner(IRunner):
     """
@@ -11,12 +11,8 @@ class BaskRunner(IRunner):
     """
     var = 1
 
-
-
     def __init__(self):
         pass
-
-
 
     def initialize(self, params, settings):
         pass
@@ -29,6 +25,7 @@ class BaskRunner(IRunner):
 
     def getResult(self):
         return ""
+
 
 if __name__ == '__main__':
     pass

@@ -1,6 +1,7 @@
 package com.github.yishenggudou.blitzcrank;
 
 import org.python.core.Py;
+import org.python.core.PyModule;
 import org.python.core.PyObject;
 import org.python.core.PySystemState;
 
@@ -10,13 +11,13 @@ import org.python.core.PySystemState;
 public class JythonObjectFactory {
 
     private final Class interfaceType;
-    private final PyObject klass;
+    private PyModule klass;
 
     public JythonObjectFactory(PySystemState state, Class interfaceType, String moduleName, String className) {
         this.interfaceType = interfaceType;
         PyObject importer = state.getBuiltins().__getitem__(Py.newString("__import__"));
         PyObject module = importer.__call__(Py.newString(moduleName));
-        klass = module.__getattr__(className);
+        klass = (PyModule) module.__getattr__(className);
         System.err.println("module=" + module + ",class=" + klass);
     }
 
@@ -24,9 +25,17 @@ public class JythonObjectFactory {
         this(new PySystemState(), interfaceType, moduleName, className);
     }
 
+    public Object createWrapperObject() {
+        PyObject a = klass;
+        Object resp = klass.newJ(interfaceType);
+        return resp;
+    }
+
 
     public Object createObject() {
-        return klass.__call__().__tojava__(interfaceType);
+        PyObject a = klass.__call__();
+        Object resp = a.__tojava__(interfaceType);
+        return resp;
     }
 
 
@@ -48,7 +57,6 @@ public class JythonObjectFactory {
         for (int i = 0; i < args.length; i++) {
             convertedArgs[i] = Py.java2py(args[i]);
         }
-
         return klass.__call__(convertedArgs, keywords).__tojava__(interfaceType);
     }
 

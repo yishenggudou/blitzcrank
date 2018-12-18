@@ -9,7 +9,7 @@
 
 # Packages
 *.egg
-*.egg-info
+jwrapper.egg-info
 build
 eggs
 parts
