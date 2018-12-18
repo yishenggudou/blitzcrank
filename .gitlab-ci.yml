@@ -12,5 +12,7 @@ test_job:
 release_job:
   script:
   - uname -a
-  - mvn test
+  - /Users/timgerk/.scripts
   stage: release
+  only:
+  - tags
