@@ -1,4 +1,4 @@
-package com.github.yishenggudou.blitzcrank.common;
+package com.github.yishenggudou.blitzcrank;
 
 import java.util.Map;
 

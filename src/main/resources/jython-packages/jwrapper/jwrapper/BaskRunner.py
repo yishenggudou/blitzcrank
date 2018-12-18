@@ -3,7 +3,7 @@
 # yishenggudou@gmail.com
 # @timger http://weibo.com/zhanghaibo
 
-from com.github.yishenggudou.blitzcrank.common import IRunnerType
+from com.github.yishenggudou.blitzcrank import IRunnerType
 
 
 class BaskRunner(IRunnerType, object):

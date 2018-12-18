@@ -1,6 +1,5 @@
-package com.github.yishenggudou.blitzcrank.tasks;
+package com.github.yishenggudou.blitzcrank;
 
-import com.github.yishenggudou.blitzcrank.common.IRunnerType;
 import org.python.core.Py;
 import org.python.core.PySystemState;
 

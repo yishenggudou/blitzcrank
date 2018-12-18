@@ -1,4 +1,4 @@
-package com.github.yishenggudou.blitzcrank.tasks;
+package com.github.yishenggudou.blitzcrank;
 
 import org.python.core.*;
 
