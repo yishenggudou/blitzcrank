@@ -20,4 +20,11 @@ public interface IRunnerType {
 
     public String getSetting();
 
+    public String getContext();
+
+    public void rollback();
+
+    public void retry();
+
+
 }
