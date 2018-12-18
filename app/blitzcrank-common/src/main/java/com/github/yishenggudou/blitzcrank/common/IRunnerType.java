@@ -16,6 +16,8 @@ public interface IRunnerType {
 
     public String getResult();
 
+    public String getParams();
 
+    public String getSetting();
 
 }
