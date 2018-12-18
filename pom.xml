@@ -65,21 +65,21 @@
                         <fileset>
                             <directory>src/main/resources/jython-packages/jwrapper/build</directory>
                             <includes>
-                                <include>**/*</include>
+                                <include>**</include>
                             </includes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                         <fileset>
                             <directory>src/main/resources/jython-packages/jwrapper/jwrapper.egg-info</directory>
                             <includes>
-                                <include>**/*</include>
+                                <include>**</include>
                             </includes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
                         <fileset>
                             <directory>src/main/resources/jython-packages/jwrapper/temp</directory>
                             <includes>
-                                <include>**/*</include>
+                                <include>**</include>
                             </includes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
