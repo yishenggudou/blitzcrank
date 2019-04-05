@@ -1,4 +1,4 @@
-package com.github.yishenggudou.blitzcrank;
+package com.github.yishenggudou.blitzcrank.core;
 
 import org.python.core.Py;
 import org.python.core.PySystemState;

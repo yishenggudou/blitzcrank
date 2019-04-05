@@ -2,7 +2,7 @@
 
 ## write python 
 
-## complie to java
+## compile to java
 
 
 

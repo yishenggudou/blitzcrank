@@ -5,7 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.yishenggudou</groupId>
     <artifactId>blitzcrank</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.11</version>
+    <modules>
+        <module>blitzcrank-starter</module>
+        <module>blitzcrank-core</module>
+        <module>blitzcrank-tests</module>
+        <module>blitzcrank-maven-plugin</module>
+    </modules>
     <name>blitzcrank-project</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,4 +1,4 @@
-package com.github.yishenggudou.blitzcrank;
+package blitzcrank;
 
 import org.junit.Test;
 
