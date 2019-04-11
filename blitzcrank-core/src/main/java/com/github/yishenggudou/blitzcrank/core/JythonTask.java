@@ -2,7 +2,8 @@ package com.github.yishenggudou.blitzcrank.core;
 
 /**
  * @author timger
+ * @date
  */
-public class ComplieTask {
+public interface JythonTask {
 
 }
